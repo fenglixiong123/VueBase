@@ -1,26 +1,27 @@
-<<<<<<< HEAD
+
 # VueBase
 Vue基础学习
-=======
-# vbase
 
-> A Vue.js project
+1.基础指令
 
-## Build Setup
+***组件computer.vue***
 
-``` bash
-# install dependencies
-npm install
+- v-once:只能渲染一次
+- v-html:解析html结构
+- v-bind:指令,解析属性中的对象
+- v-bind:简写 :href :class
+- v-if:条件渲染
+- v-show:条件渲染
+- v-for:列表渲染
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
->>>>>>> 初始化git项目上传到github
+1.遍历数组
+  <li v-for="name in names">{{name}}</li>
+  <li v-for="(name,index) in names">{{name}},{{index}}</li>
+2.遍历对象
+  <li v-for="(value,key,index) in user">{{key}}--{{value}}--{{index}}</li>
+3.遍历数组对象
+  <li v-for="user in users">{{user.name}}---{{user.age}}</li>
+  <li v-for="(user,index) in users">{{index}}---{{user.name}}---{{user.age}}</li>
+```
+2.事件
