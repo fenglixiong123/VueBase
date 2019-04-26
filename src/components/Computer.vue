@@ -1,5 +1,5 @@
 <template>
-    <dev class="hello">
+    <div class="hello">
       <hr/>
       {{msg}}
       <br/>
@@ -25,7 +25,8 @@
       <div v-else>
         年龄小于10岁
       </div>
-      <div style="float: left">
+      <hr/>
+      <div>
         <ul>
           <li v-for="name in names">{{name}}</li>
         </ul>
@@ -40,7 +41,7 @@
         </ul>
       </div>
       <hr/>
-    </dev>
+    </div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png" class="imgClass">
 <!--    <router-view/>-->
     <HelloWorld/>
     <Computer/>
@@ -25,4 +25,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.imgClass{
+  width: 200px;
+  height: 200px;
+}
+
 </style>
