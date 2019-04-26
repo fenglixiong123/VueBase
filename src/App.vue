@@ -4,15 +4,17 @@
 <!--    <router-view/>-->
     <HelloWorld/>
     <Computer/>
+    <Event/>
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
 import Computer from './components/Computer'
+import Event from "./components/Event";
 export default {
   name: 'App',
-  components: {Computer, HelloWorld}
+  components: {Event, Computer, HelloWorld}
 }
 </script>
 

@@ -24,4 +24,10 @@ Vue基础学习
   <li v-for="user in users">{{user.name}}---{{user.age}}</li>
   <li v-for="(user,index) in users">{{index}}---{{user.name}}---{{user.age}}</li>
 ```
-2.事件
+2.事件处理
+
+- v-on:click 点击事件  
+    this.xxx : 可以直接调用数据  
+    传递参数 @click="clickMe('dont hit me',$event)"  
+    其中$event是传递事件本身的
+- @click :简写
