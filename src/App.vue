@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png" class="imgClass">
+<!--    <img src="./assets/logo.png" class="imgClass">-->
 <!--    <router-view/>-->
     <HelloWorld/>
     <Base/>
     <Event/>
+    <Compute/>
   </div>
 </template>
 
@@ -12,9 +13,10 @@
 import HelloWorld from "./components/HelloWorld";
 import Base from './components/Base'
 import Event from "./components/Event";
+import Compute from "./components/Compute";
 export default {
   name: 'App',
-  components: {Event, Base, HelloWorld}
+  components: {Compute, Event, Base, HelloWorld}
 }
 </script>
 
