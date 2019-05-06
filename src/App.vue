@@ -6,6 +6,7 @@
     <Event/>
     <Compute/>
     <Style/>
+    <Form/>
   </div>
 </template>
 
@@ -14,9 +15,10 @@ import Base from './components/Base'
 import Event from "./components/Event";
 import Compute from "./components/Compute";
 import Style from "./components/Style";
+import Form from "./components/Form";
 export default {
   name: 'App',
-  components: {Style, Compute, Event, Base}
+  components: {Form, Style, Compute, Event, Base}
 }
 </script>
 

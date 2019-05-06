@@ -43,5 +43,19 @@ computed：可以返回计算过得属性值
 class为对象的形式{a:true,b:false}  
 数组也可以的[a,b,c,d,e,{f:true}]  
 
-style
+style  
+:style="{color:activeColor,fontSize:fontSize+'px'}"  
+其中activeColor，fontSize可以自定义
+
+5.表单输入绑定
+
+v-model:数据双向绑定  
+也即是说双方数据一致
+
+- .lazy 懒加载，回车和失去焦点之后才会同步变化数据
+- .trim 去掉前后空格
+- .number 转换为数字类型
+
+watch 监听字段作用，可以用于预警处理数据  
+实时监听数据变化，比如数据>100可以弹出警告
 
