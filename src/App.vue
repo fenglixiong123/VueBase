@@ -3,18 +3,18 @@
     <img src="./assets/logo.png" class="imgClass">
 <!--    <router-view/>-->
     <HelloWorld/>
-    <Computer/>
+    <Base/>
     <Event/>
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
-import Computer from './components/Computer'
+import Base from './components/Base'
 import Event from "./components/Event";
 export default {
   name: 'App',
-  components: {Event, Computer, HelloWorld}
+  components: {Event, Base, HelloWorld}
 }
 </script>
 

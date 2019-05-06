@@ -46,7 +46,7 @@
 
 <script>
     export default {
-        name: "Computer",
+        name: "Base",
         data(){
             return {
               msg:'基本指令一',
