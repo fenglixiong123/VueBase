@@ -31,3 +31,17 @@ Vue基础学习
     传递参数 @click="clickMe('dont hit me',$event)"  
     其中$event是传递事件本身的
 - @click :简写
+
+3.计算属性
+
+computed：可以返回计算过得属性值  
+跟函数不同的是，此属性具有缓存功能除非依赖发生改变否则不会重新计算  
+而函数是每次会重新执行重新计算
+
+4.Class与Style绑定
+
+class为对象的形式{a:true,b:false}  
+数组也可以的[a,b,c,d,e,{f:true}]  
+
+style
+

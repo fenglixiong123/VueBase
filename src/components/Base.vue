@@ -1,8 +1,6 @@
 <template>
     <div class="hello">
-      <hr/>
-      {{msg}}
-      <br/>
+      <h1>{{msg}}</h1>
       模板语法
       <br/>
       {{5+2}}

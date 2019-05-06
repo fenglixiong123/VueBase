@@ -1,7 +1,6 @@
 <template>
     <div>
       <h1>{{msg}}</h1>
-      <hr/>
       <input type="text" :value="inputBox"/>
       <input type="button" @click="clickMe('dont hit me',$event)" value="点击我"/>
     </div>
