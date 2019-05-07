@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import Base from './components/Base'
-import Event from "./components/Event";
-import Compute from "./components/Compute";
-import Style from "./components/Style";
-import Form from "./components/Form";
+import Base from './components/base/Base'
+import Event from "./components/base/Event";
+import Compute from "./components/base/Compute";
+import Style from "./components/base/Style";
+import Form from "./components/base/Form";
 export default {
   name: 'App',
   components: {Form, Style, Compute, Event, Base}
