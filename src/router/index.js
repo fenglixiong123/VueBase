@@ -5,6 +5,7 @@ import Form from "../components/base/Form";
 import Event from "../components/base/Event";
 import Style from "../components/base/Style";
 import Compute from "../components/base/Compute";
+import Student from "../components/object/Student";
 
 Vue.use(Router);
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/compute',
       name: 'Compute',
       component: Compute
+    },
+    {
+      path: '/student',
+      name: 'Student',
+      component: Student
     }
   ]
 })
