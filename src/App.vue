@@ -6,7 +6,8 @@
     <router-link to="/style">样式</router-link>
     <router-link to="/form">表单</router-link>
     <br/>
-    <router-link to="/student">新组件</router-link>
+    <router-link to="/student">组件数据传递</router-link>
+    <router-link to="/keep">KeepAlive</router-link>
     <hr/>
     <router-view/>
   </div>

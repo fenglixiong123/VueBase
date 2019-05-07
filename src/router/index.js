@@ -6,6 +6,7 @@ import Event from "../components/base/Event";
 import Style from "../components/base/Style";
 import Compute from "../components/base/Compute";
 import Student from "../components/object/Student";
+import Keep from "../components/object/Keep";
 
 Vue.use(Router);
 
@@ -41,6 +42,11 @@ export default new Router({
       path: '/student',
       name: 'Student',
       component: Student
+    },
+    {
+      path: '/keep',
+      name: 'Keep',
+      component: Keep
     }
   ]
 })

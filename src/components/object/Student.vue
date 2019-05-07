@@ -8,6 +8,7 @@
         <p>公告栏：</p>
         {{schoolMsg}}
       </div>
+
     </div>
 </template>
 
@@ -16,7 +17,7 @@
     import School from "./School";
     export default {
       name: "Student",
-      components: {School},
+      components: { School},
       data(){
           return{
             msg:'我是学生小明',
