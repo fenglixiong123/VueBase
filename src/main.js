@@ -9,6 +9,9 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  data:{
+    globalMsg:'我是根元素'
+  },
   router,
   components: { App },
   template: '<App/>'

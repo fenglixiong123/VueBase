@@ -8,6 +8,7 @@ import Compute from "../components/base/Compute";
 import Student from "../components/object/Student";
 import Keep from "../components/object/Keep";
 import Parent from "../components/object/Parent";
+import Refer from "../components/object/Refer";
 
 Vue.use(Router);
 
@@ -53,6 +54,11 @@ export default new Router({
       path: '/parent',
       name: 'Parent',
       component: Parent
+    },
+    {
+      path: '/refer',
+      name: 'Refer',
+      component: Refer
     }
   ]
 })

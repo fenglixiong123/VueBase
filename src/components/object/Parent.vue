@@ -1,11 +1,17 @@
 <template>
-    <div class="parentDiv">
-      父组件
-      <div>
-        接收子组件消息：{{moneyMsg}}
+    <div>
+      <div class="parentDiv">
+        父组件
+        <div>
+          接收子组件消息：{{moneyMsg}}
+        </div>
+        <div>
+          <Child @moneyEvent="getMoney" title="先定一个一个亿的小目标" :age="age" nick="王思聪"/>
+        </div>
       </div>
+      <br/>
       <div>
-        <Child @moneyEvent="getMoney" title="先定一个一个亿的小目标" :age="age" nick="王思聪"/>
+        访问根元素：{{globalMsg}}
       </div>
     </div>
 </template>
@@ -18,8 +24,14 @@
       data(){
           return{
             moneyMsg:'',
-            age:30
+            age:30,
+            hobby:'泡妹子'
           }
+      },
+      computed:{
+        globalMsg:function () {
+          return this.$root.globalMsg;
+        }
       },
       methods:{
         getMoney:function (data) {

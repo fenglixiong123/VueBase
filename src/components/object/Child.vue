@@ -1,6 +1,6 @@
 <template>
     <div class="childDiv">
-      子组件:{{age}},{{nick}},{{sex}}
+      子组件:{{age}},{{nick}},{{sex}},{{hobby}}
       <div>
         接收父组件消息：{{title}}
       </div>
@@ -14,6 +14,11 @@
       data(){
           return{
 
+          }
+      },
+      computed:{
+          hobby:function () {
+            return this.$parent.hobby;
           }
       },
       props:{
