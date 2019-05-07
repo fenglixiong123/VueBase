@@ -23,7 +23,6 @@
       <div v-else>
         年龄小于10岁
       </div>
-      <hr/>
       <div>
         <ul>
           <li v-for="name in names">{{name}}</li>

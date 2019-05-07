@@ -1,6 +1,5 @@
 <template>
     <div>
-      <hr/>
       <h1>{{msg}}</h1>
       原始：{{message}}<br/>
       反转：{{c_message}}<br/>

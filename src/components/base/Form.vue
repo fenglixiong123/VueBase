@@ -1,6 +1,5 @@
 <template>
     <div>
-      <hr/>
       <h1>{{msg}}</h1>
       <div>
         <div>

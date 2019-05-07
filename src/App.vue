@@ -2,11 +2,18 @@
   <div id="app">
 <!--    <img src="./assets/logo.png" class="imgClass">-->
 <!--    <router-view/>-->
-    <Base/>
-    <Event/>
-    <Compute/>
-    <Style/>
-    <Form/>
+<!--    <Base/>-->
+<!--    <Event/>-->
+<!--    <Compute/>-->
+<!--    <Style/>-->
+<!--    <Form/>-->
+    <router-link to="/base">基础指令</router-link>
+    <router-link to="/event">事件</router-link>
+    <router-link to="/compute">计算属性</router-link>
+    <router-link to="/style">样式</router-link>
+    <router-link to="/form">表单</router-link>
+    <hr/>
+    <router-view/>
   </div>
 </template>
 
