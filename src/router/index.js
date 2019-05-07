@@ -9,6 +9,7 @@ import Student from "../components/object/Student";
 import Keep from "../components/object/Keep";
 import Parent from "../components/object/Parent";
 import Refer from "../components/object/Refer";
+import Slot from "../components/object/Slot";
 
 Vue.use(Router);
 
@@ -59,6 +60,11 @@ export default new Router({
       path: '/refer',
       name: 'Refer',
       component: Refer
+    },
+    {
+      path: '/slot',
+      name: 'Slot',
+      component: Slot
     }
   ]
 })

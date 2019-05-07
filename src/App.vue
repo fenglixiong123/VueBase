@@ -11,6 +11,7 @@
     <router-link to="/parent">父子组件</router-link>
     <br/>
     <router-link to="/refer">Refer</router-link>
+    <router-link to="/slot">Slot</router-link>
     <hr/>
     <router-view/>
   </div>

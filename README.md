@@ -94,6 +94,31 @@ props:{
 } 
 ``` 
 
-9.根元素
+9.获取属性方式
+
+- 获取跟元素：this.$root.msg
+- 获取父级属性：this.$parent.msg
+- 获取原生dom属性：this.$refs.input1
+
+10.插槽
+
+效果：内容展示由父级组件传递
+
+内容分发  
+也即是将在组件内的内容展示在组件内slot的地方  
+<//Student>我很好<//Student>  
+这句话会显示在Student组件里面的template里面的  
+<//slot><//slot>  
+
+具名插槽：带名字的插槽  
+可以插入制定位置  
+</template v-slot:footer>
+
+作用域插槽：带有作用域  
+父组件用来定义格式框架  
+子组件用来传递数据血肉  
+父组件：slot-scope="entity"  
+{{entity.message}}  
+子组件：message="hello"  
 
 

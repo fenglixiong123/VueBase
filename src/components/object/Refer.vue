@@ -3,7 +3,7 @@
       音乐实例
       <p ref="p1">倒计时2秒...</p>
       <div>
-        <input type="text" ref="input1"/>
+        <input type="text" ref="input1" value="哈哈"/>
         <button @click="getInputValue">获取input框的值</button>
       </div>
     </div>
