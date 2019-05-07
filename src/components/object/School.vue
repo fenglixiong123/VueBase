@@ -41,7 +41,7 @@
 
 <style scoped>
   .schoolDiv{
-    margin: 10px 10px;
+    margin: 0 auto;
     padding: 20px;
     width: 500px;
     height: 200px;

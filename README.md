@@ -73,3 +73,27 @@ props:['name','master','address']
 
 保持组件切换状态
 可以保存组件状态防止重复渲染
+
+8.prop属性验证
+
+- String
+- Number
+- Boolean
+- Array
+- Object
+- Date
+- Function
+- Symbol  
+```
+props:{  
+  title:{  
+    type:String,  
+    required:true,  
+    default:'小目标'  
+  }  
+} 
+``` 
+
+9.根元素
+
+

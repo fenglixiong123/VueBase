@@ -7,6 +7,7 @@ import Style from "../components/base/Style";
 import Compute from "../components/base/Compute";
 import Student from "../components/object/Student";
 import Keep from "../components/object/Keep";
+import Parent from "../components/object/Parent";
 
 Vue.use(Router);
 
@@ -47,6 +48,11 @@ export default new Router({
       path: '/keep',
       name: 'Keep',
       component: Keep
+    },
+    {
+      path: '/parent',
+      name: 'Parent',
+      component: Parent
     }
   ]
 })

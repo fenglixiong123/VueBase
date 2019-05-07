@@ -8,6 +8,7 @@
     <br/>
     <router-link to="/student">组件数据传递</router-link>
     <router-link to="/keep">KeepAlive</router-link>
+    <router-link to="/parent">父子组件</router-link>
     <hr/>
     <router-view/>
   </div>
