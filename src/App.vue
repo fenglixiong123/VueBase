@@ -12,6 +12,7 @@
     <br/>
     <router-link to="/refer">Refer</router-link>
     <router-link to="/slot">Slot</router-link>
+    <router-link to="/directive">Directive</router-link>
     <hr/>
     <router-view/>
   </div>
@@ -32,7 +33,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 </style>

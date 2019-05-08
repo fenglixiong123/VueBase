@@ -10,6 +10,7 @@ import Keep from "../components/object/Keep";
 import Parent from "../components/object/Parent";
 import Refer from "../components/object/Refer";
 import Slot from "../components/object/Slot";
+import Directive from "../components/web/Directive";
 
 Vue.use(Router);
 
@@ -65,6 +66,11 @@ export default new Router({
       path: '/slot',
       name: 'Slot',
       component: Slot
+    },
+    {
+      path: '/directive',
+      name: 'Directive',
+      component: Directive
     }
   ]
 })

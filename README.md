@@ -121,4 +121,46 @@ props:{
 {{entity.message}}  
 子组件：message="hello"  
 
+11.生命周期
 
+- beforeCreate----------创建之前
+- create-------------------创建之后
+- beforeMount----------渲染之前
+- mounted----------------渲染之后
+- beforeUpdate---------更新之前
+- updated----------------更新之后
+- beforeDestroy--------销毁之前
+- destroyed--------------销毁之后
+
+比如网络请求可以放在mounted中
+
+12.自定义指令
+
+必须在main中来自定义指令
+```
+//定义全局自定义指令
+Vue.directive("focus",{
+  //常用
+  //指令第一次绑定到元素时候调用
+  bind:function(){
+    console.log("Bing只执行一次")
+  },
+  //常用
+  //el代表指令所在的元素本身
+  inserted:function (el,binding,) {
+    console.log("Insert元素插入父组件时候执行",el,binding);
+    el.focus();
+  },
+  update:function () {
+    console.log("Update元素更新时候执行");
+  },
+  componentUpdated:function () {
+    console.log("ComponentUpdated发生在元素以及其子组件全部更新之后执行");
+  },
+  unbind:function () {
+    console.log("Unbind指令与元素解除绑定时候执行")
+  }
+});
+```
+局部指令  
+在data同级directives{}
