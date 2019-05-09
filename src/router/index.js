@@ -18,13 +18,26 @@ import News from "../components/router/News";
 import Quick from "../components/router/Quick";
 import CodeRouter from "../components/router/CodeRouter";
 import Stock from "../components/router/Stock";
-import Qurey from "../components/router/Qurey";
+import Query from "../components/router/Query";
+import Home from "../components/Home";
+import NotFound from "../components/NotFound";
 
 Vue.use(Router);
 
 export default new Router({
   mode:'history',
+  linkActiveClass:'active',
+  linkExactActiveClass:'currentActive',
   routes: [
+    {
+      path: '/',
+      redirect: "/home"
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home
+    },
     {
       path: '/base',
       name: 'Base',
@@ -113,7 +126,7 @@ export default new Router({
         {
           path: 'query',
           name:'Query',
-          component:Qurey
+          component:Query
         }
       ]
     },
@@ -121,6 +134,10 @@ export default new Router({
       path: '/codeRouter',
       name: 'CodeRouter',
       component: CodeRouter
-    }
+    },
+    {
+      path: '*',
+      component: NotFound
+    },
   ]
 })

@@ -63,4 +63,10 @@ ul li{
   padding: 20px;
 }
 
+.active{
+  color: blue;
+}
+.currentActive{
+  border: 1px solid green;
+}
 </style>

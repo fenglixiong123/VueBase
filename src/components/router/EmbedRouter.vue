@@ -25,10 +25,19 @@
 
 <style scoped>
   .routeClass{
-    width: 550px;
+    width: 70%;
     height: 350px;
     border: 1px solid #8aa010;
     margin: 0 auto;
     padding: 20px;
   }
+
+  .active{
+    color: red;
+  }
+
+  .currentActive{
+     border: 1px solid green;
+   }
+
 </style>

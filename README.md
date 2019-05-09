@@ -262,7 +262,9 @@ new Vue({
 
 - 动态路由  
 path: '/routerBox/:id'  
-组件中取ID：{{this.$route.params.id}}    
+获取路径值：this.$route.params.id     
+获取参数：this.$route.query.name  
+获取路径：this.$route.path   
 <router-link :to="{name:'Stock',params:{hot:'蓝电霸王龙'}}">股票</router-link>  
 <router-link :to="{name:'Query',query:{focus:'李嘉诚'}}">问答</router-link>  
        
@@ -302,3 +304,19 @@ router.push({ path: 'register', query: { plan: 'private' }})
        
 - 重定向和别名
 
+路由最开头  
+path: '/',  
+redirect: "/home"
+
+- 更改超链接
+
+子父级匹配：  
+.router-link-active{
+  color: red;
+}  
+linkActiveClass:'active',
+
+精准匹配
+.router-link-exact-active{
+    border: 1px solid green;
+  }
