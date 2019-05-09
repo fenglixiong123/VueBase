@@ -16,10 +16,12 @@
     <router-link to="/filter">Filter</router-link>
     <router-link to="/axios">Axios</router-link>
     <br/>
-    <ul>
-    <router-link tag="li" to="/routerBox">路由画布</router-link>
+    <router-link to="/embedRouter">嵌套路由</router-link>
+    <router-link to="/codeRouter">编程路由</router-link>
+    <router-link :to="{name:'Stock',params:{hot:'蓝电霸王龙'}}">命名路由</router-link>
+    <router-link :to="{name:'Query',query:{focus:'李嘉诚'}}">带参路由</router-link>
+    <br/>
 <!--    <router-link tag="li" to="/routerBox">路由画布</router-link>-->
-    </ul>
     <hr/>
     <div class="routeClass">
       <router-view/>
@@ -54,8 +56,8 @@ ul li{
 }
 
 .routeClass{
-  width: 650px;
-  height: 500px;
+  width: 60%;
+  height: 800px;
   border: 1px solid cadetblue;
   margin: 0 auto;
   padding: 20px;

@@ -13,9 +13,12 @@ import Slot from "../components/object/Slot";
 import Directive from "../components/web/Directive";
 import Filter from "../components/web/Filter";
 import Axios from "../components/web/Axios";
-import RouterBox from "../components/router/RouterBox";
+import EmbedRouter from "../components/router/EmbedRouter";
 import News from "../components/router/News";
 import Quick from "../components/router/Quick";
+import CodeRouter from "../components/router/CodeRouter";
+import Stock from "../components/router/Stock";
+import Qurey from "../components/router/Qurey";
 
 Vue.use(Router);
 
@@ -88,9 +91,9 @@ export default new Router({
       component: Axios
     },
     {
-      path: '/routerBox',
-      name: 'RouterBox',
-      component: RouterBox,
+      path: '/embedRouter',
+      name: 'EmbedRouter',
+      component: EmbedRouter,
       children:[
         {
           path: 'news',
@@ -101,8 +104,23 @@ export default new Router({
           path: 'quick',
           name:'Quick',
           component:Quick
+        },
+        {
+          path: 'stock/:hot',
+          name:'Stock',
+          component:Stock
+        },
+        {
+          path: 'query',
+          name:'Query',
+          component:Qurey
         }
       ]
+    },
+    {
+      path: '/codeRouter',
+      name: 'CodeRouter',
+      component: CodeRouter
     }
   ]
 })

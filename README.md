@@ -260,11 +260,13 @@ new Vue({
 (6)路由跳转  
 <router-link to="/hello">问候一下</router-link>
 
-动态路由  
+- 动态路由  
 path: '/routerBox/:id'  
-组件中取ID：{{this.$route.params.id}}  
-
-嵌套路由  
+组件中取ID：{{this.$route.params.id}}    
+<router-link :to="{name:'Stock',params:{hot:'蓝电霸王龙'}}">股票</router-link>  
+<router-link :to="{name:'Query',query:{focus:'李嘉诚'}}">问答</router-link>  
+       
+- 嵌套路由  
 ```
 {
       path: '/routerBox',
@@ -287,4 +289,16 @@ path: '/routerBox/:id'
 <router-link to="/routerBox/quick">快讯</router-link>  
 <router-link to="/routerBox/news">新闻</router-link>
 
+- 编程式路由导航  
+
+// 字符串
+router.push('home')  
+// 对象  
+router.push({ path: 'home' })  
+// 命名的路由  
+router.push({ name: 'user', params: { userId: '123' }})  
+// 带查询参数，变成 /register?plan=private  
+router.push({ path: 'register', query: { plan: 'private' }})  
        
+- 重定向和别名
+
