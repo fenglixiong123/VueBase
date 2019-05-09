@@ -15,8 +15,15 @@
     <router-link to="/directive">Directive</router-link>
     <router-link to="/filter">Filter</router-link>
     <router-link to="/axios">Axios</router-link>
+    <br/>
+    <ul>
+    <router-link tag="li" to="/routerBox">路由画布</router-link>
+<!--    <router-link tag="li" to="/routerBox">路由画布</router-link>-->
+    </ul>
     <hr/>
-    <router-view/>
+    <div class="routeClass">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -36,6 +43,22 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 30px;
+}
+
+ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: underline;
+  color: red;
+}
+
+.routeClass{
+  width: 650px;
+  height: 500px;
+  border: 1px solid cadetblue;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 </style>

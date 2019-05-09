@@ -13,6 +13,9 @@ import Slot from "../components/object/Slot";
 import Directive from "../components/web/Directive";
 import Filter from "../components/web/Filter";
 import Axios from "../components/web/Axios";
+import RouterBox from "../components/router/RouterBox";
+import News from "../components/router/News";
+import Quick from "../components/router/Quick";
 
 Vue.use(Router);
 
@@ -83,6 +86,23 @@ export default new Router({
       path: '/axios',
       name: 'Axios',
       component: Axios
+    },
+    {
+      path: '/routerBox',
+      name: 'RouterBox',
+      component: RouterBox,
+      children:[
+        {
+          path: 'news',
+          name:'News',
+          component:News
+        },
+        {
+          path: 'quick',
+          name:'Quick',
+          component:Quick
+        }
+      ]
     }
   ]
 })

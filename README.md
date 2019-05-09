@@ -225,3 +225,66 @@ proxyTable: {
 但是因为/douban是我们不需要的需要替换掉此时需要
 pathRewrite，会把/douban替换为空，这样就得到我们想要的结果了
 
+16.路由
+
+(1)安装路由  
+cnpm install vue-router --save
+
+(2)声明路由  
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+
+(3)创建路由  
+
+@为根目录
+```
+const router = new VueRouter({
+  mode:'history',
+  routes:[
+    {
+        path:'/',
+        name:'Hello',
+        component:Hello
+    }
+  ]
+})
+```
+(4)路由显示位置
+<router-view/>
+
+(5)路由注入实例  
+new Vue({  
+  router  
+})
+
+(6)路由跳转  
+<router-link to="/hello">问候一下</router-link>
+
+动态路由  
+path: '/routerBox/:id'  
+组件中取ID：{{this.$route.params.id}}  
+
+嵌套路由  
+```
+{
+      path: '/routerBox',
+      name: 'RouterBox',
+      component: RouterBox,
+      children:[
+        {
+          path: 'news',
+          name:'News',
+          component:News
+        },
+        {
+          path: 'quick',
+          name:'Quick',
+          component:Quick
+        }
+      ]
+    }
+```
+<router-link to="/routerBox/quick">快讯</router-link>  
+<router-link to="/routerBox/news">新闻</router-link>
+
+       
