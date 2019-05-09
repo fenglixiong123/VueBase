@@ -11,6 +11,9 @@
       <div class="divClass" v-show="flag2">
         {{bodyText2}}
       </div>
+      <div class="divClass" v-show="flag3">
+        {{bodyText3}}
+      </div>
     </div>
 </template>
 
@@ -21,8 +24,10 @@
           return{
             bodyText1:'',
             bodyText2:'',
+            bodyText3:'',
             flag1:false,
-            flag2:false
+            flag2:false,
+            flag3:false
           }
       },
       methods:{
@@ -55,11 +60,15 @@
             console.log(err)
           })
         },
+        //这里涉及到处理跨域请求
+        // /douban会被代理为http://api.douban.com
         movieData:function () {
           const url = '/douban/v2/movie/top250';
           this.$axios.get(url)
             .then(res=>{
               console.log(res.data);
+              this.flag3 = true;
+              this.bodyText3 = res.data;
             }).catch(err=>{
             console.log(err);
           });
