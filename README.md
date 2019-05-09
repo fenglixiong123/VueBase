@@ -202,5 +202,26 @@ this.$axios.get(url,{
 })
 ```
 
-15.
+15.处理跨域请求
+
+位置：build下面webpack.dev.conf.js  
+位置：config下面index.js  
+
+proxyTable: {}
+```
+proxyTable: {
+      '/douban':{
+        target:'http://api.douban.com',
+        changeOrigin:true,
+        pathRewrite:{
+          '^/douban':''
+        },
+      }
+    },
+```
+原接口：http://api.douban.com/v2/movie/top250  
+接口调用：/douban/v2/movie/top250  
+解释：接口只要是'/douban'开头的才用代理,会把localhost:8080替换为：http://api.douban.com/douban
+但是因为/douban是我们不需要的需要替换掉此时需要
+pathRewrite，会把/douban替换为空，这样就得到我们想要的结果了
 

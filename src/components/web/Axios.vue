@@ -4,6 +4,7 @@
       <br/>
       <button @click="getUserInfo">用户信息</button>
       <button @click="searchUser">搜索用户</button>
+      <button @click="movieData">豆瓣电影</button>
       <div class="divClass" v-show="flag1">
         {{bodyText1}}
       </div>
@@ -53,6 +54,15 @@
           }).catch(err=>{
             console.log(err)
           })
+        },
+        movieData:function () {
+          const url = '/douban/v2/movie/top250';
+          this.$axios.get(url)
+            .then(res=>{
+              console.log(res.data);
+            }).catch(err=>{
+            console.log(err);
+          });
         }
       },
       mounted() {
