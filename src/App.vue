@@ -13,6 +13,7 @@
     <router-link to="/refer">Refer</router-link>
     <router-link to="/slot">Slot</router-link>
     <router-link to="/directive">Directive</router-link>
+    <router-link to="/filter">Filter</router-link>
     <hr/>
     <router-view/>
   </div>

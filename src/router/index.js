@@ -11,6 +11,7 @@ import Parent from "../components/object/Parent";
 import Refer from "../components/object/Refer";
 import Slot from "../components/object/Slot";
 import Directive from "../components/web/Directive";
+import Filter from "../components/web/Filter";
 
 Vue.use(Router);
 
@@ -71,6 +72,11 @@ export default new Router({
       path: '/directive',
       name: 'Directive',
       component: Directive
+    },
+    {
+      path: '/filter',
+      name: 'Filter',
+      component: Filter
     }
   ]
 })
