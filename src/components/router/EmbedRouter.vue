@@ -26,10 +26,10 @@
 <style scoped>
   .routeClass{
     width: 70%;
-    height: 350px;
+    height: 300px;
     border: 1px solid #8aa010;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
   }
 
   .active{

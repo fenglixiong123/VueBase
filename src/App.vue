@@ -24,8 +24,14 @@
 <!--    <router-link tag="li" to="/routerBox">路由画布</router-link>-->
     <hr/>
     <div class="routeClass">
+      <span style="float: left">视图一</span>
       <router-view/>
     </div>
+<!--    <hr/>-->
+<!--    <div class="routeClass">-->
+<!--      <span style="float: left">视图二</span>-->
+<!--      <router-view name="footer"/>-->
+<!--    </div>-->
   </div>
 </template>
 
@@ -57,7 +63,7 @@ ul li{
 
 .routeClass{
   width: 60%;
-  height: 800px;
+  height: 900px;
   border: 1px solid cadetblue;
   margin: 0 auto;
   padding: 20px;

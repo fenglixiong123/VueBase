@@ -19,8 +19,11 @@ import Quick from "../components/router/Quick";
 import CodeRouter from "../components/router/CodeRouter";
 import Stock from "../components/router/Stock";
 import Query from "../components/router/Query";
-import Home from "../components/Home";
 import NotFound from "../components/NotFound";
+import Home from "../container/Home";
+import Mine from "../container/Mine";
+import Order from "../container/Order";
+import ShopCard from "../container/ShopCard";
 
 Vue.use(Router);
 
@@ -32,11 +35,6 @@ export default new Router({
     {
       path: '/',
       redirect: "/home"
-    },
-    {
-      path: '/home',
-      name: 'Home',
-      component: Home
     },
     {
       path: '/base',
@@ -136,8 +134,34 @@ export default new Router({
       component: CodeRouter
     },
     {
+      path: '/home',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/mine',
+      name: 'Mine',
+      component: Mine
+    },
+    {
+      path: '/order',
+      name: 'Order',
+      component: Order
+    },
+    {
+      path: '/shopCard',
+      name: 'ShopCard',
+      component: ShopCard
+    },
+    {
       path: '*',
       component: NotFound
     },
+    //启用第二视图
+    // {
+    //   path: '/home',
+    //   name: 'Home',
+    //   components: {footer:Home}
+    // },
   ]
 })

@@ -320,3 +320,13 @@ linkActiveClass:'active',
 .router-link-exact-active{
     border: 1px solid green;
   }
+
+- 命名视图
+```
+<router-view name="footer"/>
+{
+      path: '/home',
+      name: 'Home',
+      components: {footer:Home}
+}
+```
