@@ -164,3 +164,43 @@ Vue.directive("focus",{
 ```
 局部指令  
 在data同级directives{}
+
+13.过滤器
+
+filter：将数据转化成另一种形式  
+{text|filter}  
+```
+filters:{
+          rmb:function (value) {
+            if(!value)return;
+            value = value.toString();
+            return '$'+value;
+          },
+        author:function (value) {
+          if(!value) return;
+          return value+"————来自：Feng";
+        }
+      }
+```
+
+14.网络请求
+
+首先在main.js中引用axios  
+import Axios from 'axios'  
+Vue.prototype.$axios = Axios;  
+```
+this.$axios.get(url,{
+  param:{
+    id:1
+  }
+})
+.then(res=>{
+  console.log(res.data)
+})
+.catch(err=>{
+  console.log(err)
+})
+```
+
+15.
+

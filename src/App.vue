@@ -14,6 +14,7 @@
     <router-link to="/slot">Slot</router-link>
     <router-link to="/directive">Directive</router-link>
     <router-link to="/filter">Filter</router-link>
+    <router-link to="/axios">Axios</router-link>
     <hr/>
     <router-view/>
   </div>

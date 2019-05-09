@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Axios from 'axios'
 
 Vue.config.productionTip = false;
+Vue.prototype.$axios = Axios;
 
 //定义全局自定义指令
 Vue.directive("focus",{

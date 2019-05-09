@@ -12,6 +12,7 @@ import Refer from "../components/object/Refer";
 import Slot from "../components/object/Slot";
 import Directive from "../components/web/Directive";
 import Filter from "../components/web/Filter";
+import Axios from "../components/web/Axios";
 
 Vue.use(Router);
 
@@ -77,6 +78,11 @@ export default new Router({
       path: '/filter',
       name: 'Filter',
       component: Filter
+    },
+    {
+      path: '/axios',
+      name: 'Axios',
+      component: Axios
     }
   ]
 })
