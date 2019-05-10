@@ -24,6 +24,7 @@ import Home from "../container/Home";
 import Mine from "../container/Mine";
 import Order from "../container/Order";
 import ShopCard from "../container/ShopCard";
+import StoreBox from "../components/stores/StoreBox";
 
 Vue.use(Router);
 
@@ -152,6 +153,11 @@ export default new Router({
       path: '/shopCard',
       name: 'ShopCard',
       component: ShopCard
+    },
+    {
+      path: '/store',
+      name: 'Store',
+      component: StoreBox
     },
     {
       path: '*',

@@ -330,3 +330,61 @@ linkActiveClass:'active',
       components: {footer:Home}
 }
 ```
+
+17.Vuex状态管理器
+
+集中管理vue的各种状态数据，适合大型应用开发  
+- state
+- getter
+- mutations  必须是同步函数
+- actions   可以是异步函数
+```
+store.js中做如下声明
+state:{
+    count:23
+  },
+  getters:{
+    getStateCount:function (state) {
+      return state.count + 1;
+    }
+  },
+  mutations:{
+    reduction:function (state,payload) {
+      state.count = state.count - payload.step;
+    }
+  },
+  actions:{
+    reductionFun:function ({dispatch,commit,state},payload) {
+      commit("reduction",payload);
+    }
+  }
+用法：
+computed:{
+  newCount:function () {
+    return this.$store.state.count;
+  },
+  getCount:function () {
+    return this.$store.getters.getStateCount;
+  },
+  ...mapState({
+    newCount1:state=>state.count,
+  }),
+  ...mapGetters([
+    'getStateCount'
+  ])
+},
+methods:{
+  subCountMutation:function () {
+    this.$store.commit("reduction",{step:3})
+  },
+  subCountDispatch:function () {
+    this.$store.dispatch("reductionFun",{step:4})
+  }
+  ...mapMutations([
+    'reduction'
+  ]),
+  ...mapActions([
+    'reductionFun'
+  ])
+}  
+```

@@ -21,6 +21,7 @@
     <router-link :to="{name:'Stock',params:{hot:'蓝电霸王龙'}}">命名路由</router-link>
     <router-link :to="{name:'Query',query:{focus:'李嘉诚'}}">带参路由</router-link>
     <br/>
+    <router-link to="/store">状态管理器</router-link>
 <!--    <router-link tag="li" to="/routerBox">路由画布</router-link>-->
     <hr/>
     <div class="routeClass">
