@@ -9,7 +9,8 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state:{
-    count:23
+    count:23,
+    message:''
   },
   getters:{
     getStateCount:function (state) {
@@ -22,6 +23,9 @@ const store = new Vuex.Store({
     },
     reduction:function (state,payload) {
       state.count = state.count - payload.step;
+    },
+    updateMessage:function (state, value) {
+      state.message = value;
     }
   },
   actions:{

@@ -25,6 +25,12 @@
       <button @click="addFun">Count增加mapDispatch</button>
       <button @click="reductionFun({step:4})">Count减少mapDispatch</button>
 
+      <br/>
+      <br/>
+      {{message}}
+      <br/>
+      <input type="text" v-model="message"/>
+      <br/>
     </div>
 </template>
 
@@ -38,6 +44,14 @@
           }
       },
       computed:{
+        message:{
+          get(){
+            return this.$store.state.message;
+          },
+          set(value){
+            this.$store.commit('updateMessage',value)
+          }
+        },
         stateCount:function () {
           return this.$store.state.count;
         },

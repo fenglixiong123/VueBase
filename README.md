@@ -405,4 +405,18 @@ modules:{
 this.$store.getter[teacher/getTeacherAge]  
 this.$store.action[teacher/yongAction] 
 
+19.表单处理
 
+```
+<input type="text" v-model="message"/>
+computed: {
+  message: {
+    get () {
+      return this.$store.state.obj.message
+    },
+    set (value) {
+      this.$store.commit('updateMessage', value)
+    }
+  }
+}
+```
