@@ -4,6 +4,29 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex);
 
+//无命名空间的注册在全局命名空间中
+//全部统一
+const studentModule = {
+  state: {
+    age:20
+  },
+  getters:{
+    getAge:function (state,getters,rootState) {
+      return state.age + 10;
+    }
+  },
+  mutations:{
+    yong:function (state) {
+      
+    }
+  },
+  actions:{
+    yongAction:function ({state, commit, rootState}) {
+
+    }
+  }
+};
+
 const store = new Vuex.Store({
   state:{
     count:23
@@ -22,12 +45,15 @@ const store = new Vuex.Store({
     }
   },
   actions:{
-    addFun:function ({commit}) {
+    addFun:function ({dispatch,commit,state}) {
       commit("add");
     },
     reductionFun:function ({dispatch,commit,state},payload) {
       commit("reduction",payload);
     }
+  },
+  modules:{
+    student:studentModule,
   }
 });
 
