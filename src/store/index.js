@@ -2,8 +2,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import student from './student.js'
-import teacher from './teacher.js'
+import student from './modules/student.js'
+import teacher from './modules/teacher.js'
 
 Vue.use(Vuex);
 
