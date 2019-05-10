@@ -388,3 +388,21 @@ methods:{
   ])
 }  
 ```
+
+18.模块状态管理器
+
+首先引入两个模块学生和老师  
+modules:{
+    student,
+    teacher
+}  
+- 非命名模块  
+其中学生为非命名模块，其会被注册到全局的getter，action
+- 命名模块  
+其中老师为命名模块  
+需要加上namespaced关键字  
+其调用方式为  
+this.$store.getter[teacher/getTeacherAge]  
+this.$store.action[teacher/yongAction] 
+
+

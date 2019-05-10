@@ -2,30 +2,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import student from './student.js'
+import teacher from './teacher.js'
+
 Vue.use(Vuex);
-
-//无命名空间的注册在全局命名空间中
-//全部统一
-const studentModule = {
-  state: {
-    age:20
-  },
-  getters:{
-    getAge:function (state,getters,rootState) {
-      return state.age + 10;
-    }
-  },
-  mutations:{
-    yong:function (state) {
-      
-    }
-  },
-  actions:{
-    yongAction:function ({state, commit, rootState}) {
-
-    }
-  }
-};
 
 const store = new Vuex.Store({
   state:{
@@ -53,7 +33,8 @@ const store = new Vuex.Store({
     }
   },
   modules:{
-    student:studentModule,
+    student,
+    teacher
   }
 });
 
